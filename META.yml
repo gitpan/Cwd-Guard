@@ -4,12 +4,13 @@ author:
   - 'Masahiro Nagano <kazeburo {at} gmail.com>'
 build_requires:
   ExtUtils::MakeMaker: 6.42
-  File::Basename: 0
   Test::More: 0
 configure_requires:
-  ExtUtils::MakeMaker: 6.42
-distribution_type: module
-generated_by: 'Module::Install version 1.00'
+  CPAN::Meta: 0
+  CPAN::Meta::Prereqs: 0
+  Module::Build: 0.38
+dynamic_config: 0
+generated_by: 'Minilla/v0.4.2, CPAN::Meta::Converter version 2.130880'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -17,14 +18,21 @@ meta-spec:
 name: Cwd-Guard
 no_index:
   directory:
-    - inc
     - t
     - xt
-requires:
-  Cwd: 0
-  Exporter: 0
-  parent: 0
+    - inc
+    - share
+    - eg
+    - examples
+    - author
+provides:
+  Cwd::Guard:
+    file: lib/Cwd/Guard.pm
+    version: 0.02
 resources:
-  license: http://dev.perl.org/licenses/
+  bugtracker: https://github.com/kazeburo/Cwd-Guard/issues
+  homepage: https://github.com/kazeburo/Cwd-Guard
   repository: git://github.com/kazeburo/Cwd-Guard.git
-version: 0.01
+version: 0.02
+x_contributors:
+  - 'Masahiro Nagano <kazeburo@gmail.com>'

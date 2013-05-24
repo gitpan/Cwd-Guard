@@ -16,9 +16,11 @@ my $dir = getcwd();
 is($dir, getcwd() );
 
 {
-    my $guard = cwd_guard( __FILE__ ); # fail
+    my $guard = eval {
+        cwd_guard( __FILE__ ); # fail
+    };
     ok(!$guard);
-    ok($Cwd::Guard::Error);
+    ok($@);
 }
 
 done_testing();
